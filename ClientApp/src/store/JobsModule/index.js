@@ -13,7 +13,7 @@ const chartOptions = {
     vAxis: { title: "Job views" },
     hAxis: { title: "" },
     width: "100%",
-    height: 300,
+    height: 400,
     pointSize: 20,
     seriesType: "bars",
     colors: ['YellowGreen', 'DarkTurquoise', 'LightGray'],

@@ -46,11 +46,12 @@
 </script>
 
 <style scoped>
-    .chart {
-        height: 50%;
+    #chartid {
+        height: 100%;
         border: 1px solid;
         padding: 20px;
         margin: 5em;
+
         box-shadow: 5px 5px 5px 5px #888888;
     }
 

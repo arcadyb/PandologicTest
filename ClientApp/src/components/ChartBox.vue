@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid chart" id="chartid">
         <div v-if="loading">Loading...</div>
-        <div v-if="loading">{{error}}</div>
+        <div v-if="error">{{error}}</div>
 
         <GChart :settings="{ packages: ['corechart', 'table', 'map'] }"
                 type="LineChart"
@@ -50,7 +50,7 @@
         height: 100%;
         border: 1px solid;
         padding: 20px;
-        margin: 5em;
+        margin-top: 5em;
 
         box-shadow: 5px 5px 5px 5px #888888;
     }

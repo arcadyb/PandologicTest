@@ -39,6 +39,9 @@ Known issues:
  1.Data points for predicted views on chart cannot be make hollow
 
  2.Custom html tooltip not implemented
+ 
+ 3.Mocked xUnite Test on JobsController failed to create DBContext from DB file 
+   due to relative path to DB in DBContext
 
 
 

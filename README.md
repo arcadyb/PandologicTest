@@ -19,10 +19,9 @@ Debug/Run application
 
 
 Result:
-![image](https://user-images.githubusercontent.com/16181086/200173572-afa4a54b-03fb-439f-b965-cb8c39c9a245.png)
 
 
-Responsive:
+
 ![image](https://user-images.githubusercontent.com/16181086/200173708-6fb68d28-4c69-4ce0-90f5-50db95e93ee9.png)
 
 
@@ -30,8 +29,9 @@ Responsive:
 
 Known issues:
 
-1.Data points for predicted views on chart cannot be make hollow
-2.Custom html tooltip not implemented
+ 1.Data points for predicted views on chart cannot be make hollow
+
+ 2.Custom html tooltip not implemented
 
 
 

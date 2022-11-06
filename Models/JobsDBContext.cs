@@ -30,23 +30,20 @@ namespace PandologicReact.Models
             new LandingPage { Id = 1, Name = "xyz", Url = "https://xyz.com/MainPage"},
             new LandingPage { Id = 2, Name = "yyy", Url = "https://yyy.com/MainPage"},
             });
-            modelBuilder.Entity<DailyJobs>().HasData(new DailyJobs[]
-             {
-                        // movies
-                        new DailyJobs { Id = 1,Date = new DateTime(2020,5,1), LandingPageId=1, ActiveJobs = 10, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 2,Date = new DateTime(2020,5,2), LandingPageId=1, ActiveJobs = 22, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 3,Date = new DateTime(2020,5,3), LandingPageId=1, ActiveJobs = 33, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 4,Date = new DateTime(2020,5,4), LandingPageId=1, ActiveJobs = 44, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 5,Date = new DateTime(2020,5,5), LandingPageId=1, ActiveJobs = 55, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 6,Date = new DateTime(2020,5,6), LandingPageId=1, ActiveJobs = 66, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 7,Date = new DateTime(2020,5,7), LandingPageId=1, ActiveJobs = 10, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 8,Date = new DateTime(2020,5,8), LandingPageId=1, ActiveJobs = 22, CumulativeViews = 99,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 9,Date = new DateTime(2020,5,9), LandingPageId=1, ActiveJobs = null, CumulativeViews = null,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 10,Date = new DateTime(2020,5,10), LandingPageId=1, ActiveJobs = null, CumulativeViews = null,CumulativeViewsPredicted  = 111},
-                        new DailyJobs { Id = 11,Date = new DateTime(2020,5,11), LandingPageId=1, ActiveJobs = null, CumulativeViews = null,CumulativeViewsPredicted  = 111},
+            var rows = new List<DailyJobs>();
+            for (int i = 1; i < 25; i++)
+            {
+                rows.Add(new DailyJobs { Id = i, Date = new DateTime(2020, 5, i), LandingPageId = 1, ActiveJobs = 20+i, CumulativeViews = 40+i*2, CumulativeViewsPredicted = 60 + i * 2 });
 
-             });
+            }
+            for (int i = 25; i < 30; i++)
+            {
+                rows.Add(new DailyJobs { Id = i, Date = new DateTime(2020, 5, i), LandingPageId = 1, ActiveJobs = null, CumulativeViews = null, CumulativeViewsPredicted = 60 + i * 2 });
 
+            }
+
+            modelBuilder.Entity<DailyJobs>().HasData(rows);
+ 
             base.OnModelCreating(modelBuilder);
         }
     }

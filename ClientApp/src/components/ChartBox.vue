@@ -49,14 +49,10 @@
     .chart {
         height: 50%;
         border: 1px solid;
-        padding: 0px;
-        margin-top: 5em;
+        padding: 20px;
+        margin: 5em;
         box-shadow: 5px 5px 5px 5px #888888;
     }
 
-    #chartid circle {
-        stroke-width: 4px !important;
-        fill: #ffffff !important;
-        stroke: #0000ff !important;
-    }
+
 </style>
